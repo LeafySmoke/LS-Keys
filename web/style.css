@@ -17,24 +17,31 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 
 .fob {
-  width: 360px;
-  border-radius: 22px;
-  background: linear-gradient(160deg, #1f2228, #0d0f14);
-  border: 1px solid #363a45;
-  box-shadow: 0 16px 70px rgba(0,0,0,0.55);
-  padding: 18px;
-  color: #eef3ff;
+  background-image: url("./assests/fob.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  width: 533px;
+  height: 875px;
+  z-index: 1;
 }
 
 .screen {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
   background: radial-gradient(circle at top, #0f1828, #0b111d);
   border: 1px solid #2d3f66;
   border-radius: 14px;
-  padding: 14px;
-  margin-bottom: 14px;
+  padding: 12px;
+  text-align: center;
 }
 
 .title {
@@ -50,18 +57,25 @@ body {
 }
 
 .actions {
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 210px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 14px;
 }
 
 button {
   border: 1px solid #334266;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #1f304f, #16233a);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(38, 58, 94, .95), rgba(23, 35, 57, .95));
   color: #e6efff;
-  padding: 11px;
+  padding: 12px;
+  min-height: 50px;
   font-weight: 700;
+  letter-spacing: .4px;
   cursor: pointer;
 }
 
@@ -70,15 +84,22 @@ button:hover {
 }
 
 .close {
-  margin-top: 12px;
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 92px;
+  transform: translateX(-50%);
+  width: 210px;
   background: linear-gradient(180deg, #4f1f2d, #3a1620);
   border-color: #6a3346;
 }
 
 .keychain {
-  margin-top: 10px;
-  max-height: 160px;
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  max-height: 280px;
   overflow-y: auto;
   border: 1px solid #2a3550;
   border-radius: 10px;
